@@ -535,3 +535,90 @@ header ul li .a{
       padding: 1rem 0;
   }
 }
+.cajaMiCuenta {
+  width: 100%;
+  padding: 15px;
+  align-content: center;
+}
+
+.title {
+  padding-top: 0px;
+  padding-bottom: 2rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.formulario {
+  border-radius: 8%;
+  background: #D3CCE3;
+  background: -webkit-gradient(linear, left top, right top, from(#E9E4F0), to(#D3CCE3));
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  padding: 3px;
+  width: 500px;
+  margin: auto;
+  box-sizing: content-box;
+  align-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-family: bebas neue;
+  font-size: 30px;
+  text-align: center;
+  color: #1a2537;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-size: 15px;
+  width: 82%;
+  padding: 10px 10px;
+  border: none;
+}
+
+.inputMicuenta {
+  background: white;
+  margin-bottom: 15px;
+  border: .5px solid #aaa;
+}
+
+.icon {
+  margin: 0px;
+  min-width: 20px;
+  text-align: center;
+  color: #999;
+}
+
+.boton {
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background: #c471ed;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: #12c2e9;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f64f59), color-stop(#c471ed), to(#12c2e9));
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.pAbajo {
+  text-align: center;
+}
+
+.linkM {
+  text-decoration: none;
+  color: #1a2537;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: cadetblue;
+}

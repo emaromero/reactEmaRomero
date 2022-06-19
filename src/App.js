@@ -1,4 +1,5 @@
 import "boxicons";
+import { BrowserRouter } from "react-router-dom";
 import { Carrito } from "./components/Carrito";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
@@ -10,12 +11,14 @@ function App() {
   return (
     <>
       <div className="App">
+        <BrowserRouter>
         <DataProvider>
           <Header />
           <Carrito />
           <ProductosList />
           <Footer />
         </DataProvider>
+        </BrowserRouter>
       </div>
     </>
   );
