@@ -9,7 +9,7 @@ export const Header = () => {
   const [carrito] = value.carrito;
   const [menu, setMenu] = value.menu;
 
-  
+
   const toogleMenu = () => {
     setMenu(!menu)
   }
@@ -19,13 +19,13 @@ export const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNav" style={{ textColor: 'black' }}>
           <ul className="navbar-nav">
             <div className="">
-              <img src={RingoL} alt="logoRingo" width="200" />
+              <Link to="/home" className=" a "><img src={RingoL} alt="logoRingo" width="200" /></Link>
             </div>
             <li className="nav-item text-reset"><Link to="/home" className=" a ">Inicio</Link></li>
             <li className="nav-item text-reset"><Link to="/productos" className=" a ">Productos</Link></li>
-            <li className="nav-item text-reset"><Link to="/#" className=" a ">¿Quienes somos?</Link></li>
-            <li className="nav-item text-reset"><Link to="/#" className=" a ">Ayuda</Link></li>
-            <li className="nav-item text-reset"><Link to="/#" className=" a ">Mi cuenta</Link></li>
+            <li className="nav-item text-reset"><Link to="/nosotros" className=" a ">¿Quienes somos?</Link></li>
+            <li className="nav-item text-reset"><Link to="/ayuda" className=" a ">Ayuda</Link></li>
+            <li className="nav-item text-reset"><Link to="/micuenta" className=" a ">Mi cuenta</Link></li>
           </ul>
         </div>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

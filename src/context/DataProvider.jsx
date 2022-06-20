@@ -30,8 +30,6 @@ export const DataProvider = (props) => {
 				return producto.id === id
 			})
 			setCarrito([...carrito, ...data])
-		} else {
-			alert("El producto se ha añadido al carrito")
 		}
 	}
 	useEffect(() => {

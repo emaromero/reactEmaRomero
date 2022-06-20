@@ -11,7 +11,7 @@ export default function Pages() {
 				<Route path="/" element={Inicio} />
 				<Route path="/productos" element={ProductosList} />
         <Route path="/producto/:id" element={ProductosDetalles} />
-        <Route path="/MiCuenta" element={MiCuenta} />
+        <Route path="/miCuenta" element={MiCuenta} />
         <Route path="/*" element={<Navigate to={Inicio}/>}/>
 			</Routes>
     </section>
