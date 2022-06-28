@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TestEventos() {
+export default function TestEventos22() {
     function handleClick(e, id) {
         console.log(e);
         alert('click en:' + id);

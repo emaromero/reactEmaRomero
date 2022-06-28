@@ -11,26 +11,26 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-md-3 mb-md-0 mb-3">
                             <h5 className="text-uppercase"> </h5>
-                            <img src={ringoL} alt="logoRingo" width="180px" className="mr-2 mb-4" />
-                            <p>Here yo columns to organiz.</p>
+                            <img src={ringoL} alt="logoRingo" width="180px" className="mr-2" />
+                            <p className="h6">HIGH QUALITY SNEAKERS</p>
                         </div>
                         <hr className="clearfix w-100 d-md-none pb-0" />
                         <div className="col-md-3 mb-md-0 mb-3">
                             <h5 className="text-uppercase">menu</h5>
                             <ul className="list-unstyled">
-                                <li className="nav-item text-reset"><Link to="/home" className=" a ">Inicio</Link></li>
-                                <li className="nav-item text-reset"><Link to="/productos" className=" a ">Productos</Link></li>
-                                <li className="nav-item text-reset"><Link to="/#" className=" a ">¿Quienes somos?</Link></li>
-                                <li className="nav-item text-reset"><Link to="/#" className=" a ">Ayuda</Link></li>
-                                <li className="nav-item text-reset"><Link to="/" className=" a ">Mi cuenta</Link></li>
+                                <li className="nav-item text-reset mt-2"><Link to="/home" className=" a ">Inicio</Link></li>
+                                <li className="nav-item text-reset mt-2"><Link to="/productos" className=" a ">Productos</Link></li>
+                                <li className="nav-item text-reset mt-2"><Link to="/#" className=" a ">¿Quienes somos?</Link></li>
+                                <li className="nav-item text-reset mt-2"><Link to="/#" className=" a ">Ayuda</Link></li>
+                                <li className="nav-item text-reset mt-2"><Link to="/" className=" a ">Mi cuenta</Link></li>
                             </ul>
                         </div>
                         <div className="col-md-3 mb-md-0 mb-3">
                             <h5 className="text-uppercase font-weight-bold">Contactanos</h5>
                             <ul className="list-unstyled">
-                                <li><i className="fas fa-home mr-3"></i>Showroom, San Fernando</li>
-                                <li><i className="fas fa-envelope mr-3"></i> ringo.info@gmail.com</li>
-                                <li><i className="fas fa-phone mr-3"></i> +54 9 1164473603</li>
+                                <li className="mt-2"><i className="fas fa-home mr-3"></i>Showroom, San Fernando</li>
+                                <li className="mt-2"><i className="fas fa-envelope mr-3"></i> GorillaGlue.info@gmail.com</li>
+                                <li className="mt-2"><i className="fas fa-phone mr-3"></i> +54 9 1164473603</li>
                             </ul>
                         </div>
                         <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
                 <hr className="w-100 clearfix d-md-none" />
                 <div className="text-center p-3">
-                    <a className="text-reset a" href="#"> ringoaccesorios.com</a>
+                    <a className="text-reset a" href="#"> GorillaGlue.com</a>
                     © 2022
                 </div>
             </footer>

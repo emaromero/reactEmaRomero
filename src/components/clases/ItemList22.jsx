@@ -1,7 +1,7 @@
 import React from 'react'
 import { Item } from './Item'
 
-export const ItemList = (personajes) => {
+export const ItemList22 = (personajes) => {
     console.log(personajes)
     return (
         <div>

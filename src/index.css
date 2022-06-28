@@ -8,6 +8,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
@@ -39,20 +40,36 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 
 /* ----------------- HEADER -------------------*/
 header{
-  width: 97%;
-  min-height: 100px;
-  max-width:1530px;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-content: center;
   align-items: center;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+  #logo img{ 
+      image-orientation: center;
+      width: 350px;
+      height: auto;
+  }
+
+.navbar{
+  font-size: 20px;
+  position: relative;
+  display: flex;
   flex-wrap: wrap;
-  position: fixed;
-  box-sizing: border-box ;
-  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  flex-direction: column;
 }
 .a{      
-  display: block;
+  display: contents;
   padding: 0.5rem 0.5rem;
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -68,21 +85,25 @@ li{
   list-style: none;
 }
 
-header ul{
+nav ul{
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
-}
-header ul li{
-  padding: 0 1rem;
-}
-header ul li .a{
   font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li{
+  padding: 2rem;
 }
 
 .cart{
   position: relative;
   cursor: pointer;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 3%;
 }
 .cart box-icon{
   width: 45px;
@@ -103,7 +124,7 @@ header ul li .a{
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 60%;
-  background-color: crimson;
+  background-color: rgb(3, 212, 104);
 }
 #iconMeta{
   width: 50px;
@@ -128,7 +149,7 @@ header ul li .a{
 /*----------- PRODUCTOS ------------*/
 .produ{
   font-size: 1.5rem;
-  padding: 10rem 0 0 0;
+  padding: 5rem 0 0 0;
   color: #161616;
   justify-content: space-around;
   text-align: center;
@@ -145,14 +166,11 @@ header ul li .a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 1px 10px 10px 2px rgba(0, 0, 0, 0.1);
-  border: 6px solid transparent;
   cursor: pointer;
   transition: transform .2s;
   border-radius: 5px;
 }
 .producto:hover{
-  border: 6px solid #ca61f357;
   transform: scale(1.05)
   ;
 }
@@ -217,45 +235,68 @@ header ul li .a{
   color: rgb(13, 107, 95);
 }
 /*-----------------CARRITO -----------*/
-.carritos{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 300ms ease-in-out;
-  background-color: rgba(0, 0, 0, .6);
-  z-index: 2;
-  padding-bottom: 5rem;
-  visibility: hidden;
+.qty .count {
+  color: #000;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 0 2px;
+  min-width: 35px;
+  text-align: center;
+  vertical-align: middle;
 }
-.carrito{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(.5);
-  width: 60%;
-  height: 80%;
-  padding: 1.6rem;
-  border-radius: 8px;
-  overflow-x: scroll;
-  transition: all 300ms ease-in-out;
-  background-color: white;
-  opacity: 0;
-  visibility: hidden;
+.qty .plus {
+  cursor: pointer;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  background-color: rgb(33, 33, 33);
+  width: 30px;
+  height: 30px;
+  font: 30px/1 Arial,sans-serif;
+  text-align: center;
+  border-radius: 50%;
+  vertical-align: middle;
+  }
+.qty .minus {
+  cursor: pointer;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  background-color: rgb(33, 33, 33);
+  width: 30px;
+  height: 30px;
+  font: 30px/1 Arial,sans-serif;
+  text-align: center;
+  border-radius: 50%;
+  background-clip: padding-box;
+  vertical-align: middle;
 }
+.minus:hover{
+  background-color: rgb(3, 212, 104) !important;
+}
+.plus:hover{
+  background-color: rgb(3, 212, 104) !important;
+}
+/*Prevent text selection*/
+span{
+  user-select: none;
+}
+input{  
+  border: 0;
+  width: 2%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:disabled{
+  background-color:white;
+}
+
 .carrito h2{
   text-align: center;
   font-size: 2rem;
-}
-.carritos.show{
-  visibility: visible;
-}
-
-.carrito.show{
-  transform: translate(-50%, -50%) scale(1.1);
-  opacity: 1;
-  visibility: visible;
 }
 .carrito__close box-icon{
   display: inline-block;
@@ -266,7 +307,7 @@ header ul li .a{
   margin: 3rem 0 0 2rem
 }
 .carrito__close box-icon:hover {
-  fill: crimson;
+  fill: rgb(214, 0, 43);
 }
 .carrito__center{
   width: 98%;
@@ -315,7 +356,7 @@ header ul li .a{
 .carrito__item .remove__item box-icon{
   width: 60px;
   height: 80px;
-  fill:  crimson;
+  fill:  rgb(20, 203, 220);
   margin-top: 2rem;
 }
 .carrito__footer{
@@ -386,7 +427,7 @@ header ul li .a{
   font-size: 2rem;
   font-weight: 600;
   color: white;
- 
+
 }
 .detalles .grid .nuevo{
   background-color:#08a05c;
@@ -621,4 +662,120 @@ input[type="password"] {
 
 .link:hover {
   color: cadetblue;
+}
+
+
+.sk-cube-grid {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: rgb(0, 0, 0);
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+.cart-img {
+  width: 60%;
+  align-self: center;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.cart-img-container {
+  align-self: center;
+}
+
+.cart-title {
+  font-size: 1rem;
+  color: #e30428;
+  line-height: 1.4;
+}
+
+.cart-container {    
+      border: 1px solid rgba(128, 128, 128, 0.763);
+      border-radius: 5px ;  
+      padding: 6px;        
+}
+
+.cart-container:hover {
+  border: 1px solid rgba(3, 212, 104, 0.44) !important;
+
+}
+.delete-btn {
+  font-weight: 500;
+  color: rgb(70, 70, 70);
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #e30428;
+}
+
+.PCI{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
 }

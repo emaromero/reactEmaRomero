@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ItemList } from './ItemList'
 
-export const ItemListContainer = ({ greeting }) => {
+export const ItemListContainer22 = ({ greeting }) => {
     const [personajes, setPersonajes] = useState([])
 
     useEffect(() => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function TestPromesas() {
+export default function TestPromesas22() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [resultado, setResultado] = useState([]);

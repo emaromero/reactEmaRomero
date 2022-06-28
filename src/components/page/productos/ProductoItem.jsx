@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { DataContext } from "../../../context/DataProvider";
+import { CartContext } from "../../../context/CartContext";
 
 export const ProductoItem = ({ title, image, category, price, id }) => {
 
-  const value = useContext(DataContext);
+  const value = useContext(CartContext);
   const addCarrito = value.addCarrito;
 
   return (
@@ -14,7 +14,7 @@ export const ProductoItem = ({ title, image, category, price, id }) => {
         <div className="producto__img">
           <img src={image} alt={title} />
         </div>
-      </Link>+
+      </Link>
       <div className="producto__footer">
         <h1>{title}</h1>
         <p>{category}</p>
