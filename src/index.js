@@ -8,7 +8,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'boxicons';
 import 'sweetalert2';
 import 'animate.css';
-import 'semantic-ui-css/semantic.min.css'
 
 
 
