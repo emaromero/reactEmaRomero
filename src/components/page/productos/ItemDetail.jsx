@@ -19,7 +19,7 @@ const ItemDetail = ({ detail }) => {
     return (
         <CardGroup>
             <Card>
-                <Card.Img variant="top" src={detail.Img} />
+                <Card.Img variant="top" src="https://stockx-360.imgix.net/Nike-LD-Waffle-Sacai-Black-Nylon/Images/Nike-LD-Waffle-Sacai-Black-Nylon/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1606321430&w=1000" />
                 <Card.Body>
                 </Card.Body>
             </Card>

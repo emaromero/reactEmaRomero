@@ -1,44 +1,31 @@
-// import { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
-// import ItemDetail from './ItemDetail';
-// import Loader from './Loader';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+
+const ItemDetailContainer = () => {
+    const [detail, setDetail] = useState([])
+
+    const { id } = useParams()
 
 
-// const ItemDetailContainer = () => {
-//     const [detail, setDetail] = useState([])
-//     const [loading, setLoading] = useState(true)
-//     const { id } = useParams()
+    useEffect(() => {
+        const db = getFirestore()
+        const productRef = doc(db, "productos", id);
+        const pedido = getDoc(productRef);
+        pedido
+            .then((snapshot) => {
+                setDetail({ ...snapshot.data(), id: snapshot.id });
+            })
+    }, [id]);
+    
+    return (
+        <div className='container'>
+                <>
+                    <ItemDetail detail={detail} />
+                </>   
+        </div>
+    )
+}
 
-
-//     const getData = () => {
-//         fetch('../../../../public/api.json')
-//             .then(res => res.json())
-//             .then(data => {
-//                 if (id) {
-//                     setDetail(data.find(products => products.id === id))
-//                 }
-//             })
-//     }
-
-//     useEffect(() => {
-//         setLoading(true)
-//         const fetch = new Promise((res, rej) => {
-//             res(getData())
-//         })
-//         fetch
-//             .then(setLoading(true))
-//             .finally(() => setLoading(false))
-//     }, [])
-
-//     return (
-//         <div className='container my-5'>
-//             {/* {loading ? <Loader loading={loading} /> : */}
-//                 <>
-//                     <ItemDetail detail={detail} />
-//                 </>
-            
-//         </div>
-//     )
-// }
-
-// export default ItemDetailContainer
+export default ItemDetailContainer

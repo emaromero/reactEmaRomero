@@ -46,17 +46,17 @@ const Cart = () => {
 					<div className='text-center d-flex justify-content-center align-items-center'>
 						<div className='row container justify-content-center align-items-center'>
 							<div className='col-2'></div>
-							<div className='col-4 text-center'>
-								<p className='h6'>PRODUCTOS</p>
+							<div className='col-4 text-center text-uppercase'>
+								<p className='h6'>productos</p>
 							</div>
-							<div className='col-2 text-center'>
-								<p className='h6'>CANTIDAD</p>
+							<div className='col-2 text-center text-uppercase'>
+								<p className='h6'>cantidad</p>
 							</div>
-							<div className='col-2 text-center'>
-								<p className='h6'>PRECIO</p>
+							<div className='col-2 text-center text-uppercase'>
+								<p className='h6'>precio</p>
 							</div>
-							<div className='col-2 text-center'>
-								<p className='h6'>TOTAL</p>
+							<div className='col-2 text-center text-uppercase'>
+								<p className='h6'>total</p>
 							</div>
 						</div>
 					</div>
@@ -108,9 +108,7 @@ const Cart = () => {
 					<p>NO HAY PRODUCTOS</p>
 					<Link to={'/'}><button className='btn btn-secondary btn-sm'>Volver a la tienda</button></Link>
 				</div>
-
 			}
-
 		</>
 	)
 }

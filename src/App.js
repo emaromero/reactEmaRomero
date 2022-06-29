@@ -12,15 +12,6 @@ import Cart from "./components/Cart";
 
 function App() {
 
-  initializeApp({
-    apiKey: "AIzaSyAGf_qKZdMBXIO-McP-ZtOVfRir662GaeU",
-    authDomain: "romero31205.firebaseapp.com",
-    projectId: "romero31205",
-    storageBucket: "romero31205.appspot.com",
-    messagingSenderId: "815870694536",
-    appId: "1:815870694536:web:6e992708b49b0eff187b3d"
-  });
-
   return (
     <>
       <div className="App">
