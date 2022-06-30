@@ -33,7 +33,7 @@ export default function ItemListContainer() {
             ;
     }, [categoryId]);
 
-
+console.log(products);
     return (
         <>
             <h2 className="my-5 text-center">Productos</h2>

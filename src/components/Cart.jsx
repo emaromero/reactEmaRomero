@@ -36,7 +36,7 @@ const Cart = () => {
 		});
 	}
 
-	
+
 
 	return (
 		<>
@@ -72,7 +72,10 @@ const Cart = () => {
 										</div>
 										<div className='col-8 d-flex flex-column align-items-center justify-content-center'>
 											<p className='text-center cart-title'>{e.name}</p>
-											<p className='delete-btn' onClick={() => deleteItem(e.id)}><i class="fa fa-trash fa-sm"></i> Eliminar producto</p>
+											<p className='delete-btn' onClick={() => deleteItem(e.id)}>
+												<i className="fa fa-trash fa-sm">
+												</i> Eliminar producto
+											</p>
 										</div>
 									</div>
 								</div>
@@ -94,19 +97,19 @@ const Cart = () => {
 
 			{cart.length > 0 ?
 				<div className='text-center py-5'>
-					<button className='btn btn-secondary btn-sm mx-2' onClick={() => {
+					<button className='btn btn-outline-danger btn-sm mx-2 text-uppercase' onClick={() => {
 						emptyCart()
 						emptyCartAlert()
 					}}>Vaciar carrito</button>
-					<button className='btn btn-secondary btn-sm mx-2' onClick={() => {
+					<button className='btn btn-outline-success btn-sm mx-2' onClick={() => {
 						purchaseAlert()
 						emptyCart()
 					}}>Finalizar compra</button>
 					<p className='text-center'>PRECIO TOTAL ${getItemPrice()}</p>
 				</div> :
-				<div className='text-center'>
-					<p>NO HAY PRODUCTOS</p>
-					<Link to={'/'}><button className='btn btn-secondary btn-sm'>Volver a la tienda</button></Link>
+				<div className='text-center text-uppercase'>
+					<p>aun no agregaste productos</p>
+					<Link to={'/'}><button className='btn btn-outline-info btn-sm text-uppercase'>ir a la tienda</button></Link>
 				</div>
 			}
 		</>

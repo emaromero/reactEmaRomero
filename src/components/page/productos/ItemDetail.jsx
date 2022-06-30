@@ -19,7 +19,7 @@ const ItemDetail = ({ detail }) => {
     return (
         <CardGroup>
             <Card>
-                <Card.Img variant="top" src="https://stockx-360.imgix.net/Nike-LD-Waffle-Sacai-Black-Nylon/Images/Nike-LD-Waffle-Sacai-Black-Nylon/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1606321430&w=1000" />
+                <Card.Img variant="top" src={detail.img} />
                 <Card.Body>
                 </Card.Body>
             </Card>
@@ -31,7 +31,6 @@ const ItemDetail = ({ detail }) => {
                         <div>{detail.category}</div><br />
                         <div>{detail.marca}</div>
                         <div className="price">$ {detail.price}</div>
-                        <p className='detail-details' dangerouslySetInnerHTML={{ __html: detail.details }}></p>
                         {mostrarCounter ? <ItemCount inicial={1} stock={8} onAdd={onAdd} product={detail.name} />
                             :
                             <>
