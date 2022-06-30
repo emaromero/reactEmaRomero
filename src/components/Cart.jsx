@@ -71,7 +71,7 @@ const Cart = () => {
 											<img src={e.img} className='cart-img'></img>
 										</div>
 										<div className='col-8 d-flex flex-column align-items-center justify-content-center'>
-											<p className='text-center cart-title'>{e.name}</p>
+											<p className='text-center'>{e.name}</p>
 											<p className='delete-btn' onClick={() => deleteItem(e.id)}>
 												<i className="fa fa-trash fa-sm">
 												</i> Eliminar producto

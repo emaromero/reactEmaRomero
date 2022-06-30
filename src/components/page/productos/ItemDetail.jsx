@@ -35,8 +35,8 @@ const ItemDetail = ({ detail }) => {
                             :
                             <>
                                 <div>
-                                    <Link className="btn btn-secondary" to='/productos'>Seguir Comprando</Link>
-                                    <Link className="btn btn-secondary mx-3" to='/cart'>Ir al carrito</Link>
+                                    <Link className="btn btn-outline-secondary" to='/productos'>Seguir Comprando</Link>
+                                    <Link className="btn btn-outline-secondary mx-3" to='/cart'>Ir al carrito</Link>
                                 </div>
                             </>
                         }
