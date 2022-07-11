@@ -89,7 +89,7 @@ export const data = [
     "marca": "NIKE",
     "cantidad": 1
   },
-  {
+  { 
     "id": 10,
     "name": "Nike Dunk High Varsity Maize",
     "img":"https://stockx-360.imgix.net/Nike-Dunk-High-Black-Varsity-Maize/Images/Nike-Dunk-High-Black-Varsity-Maize/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1609445259&w=1000",
