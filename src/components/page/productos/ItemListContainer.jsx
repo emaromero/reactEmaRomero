@@ -2,12 +2,12 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
+import Loader from './Loader'
 
 export default function ItemListContainer() {
 
     const [products, setProducts] = useState([])
     const { categoryId } = useParams()
-    const [error, setError] = useState([false])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -24,10 +24,8 @@ export default function ItemListContainer() {
         pedido
             .then((snapshot) => {
                 setProducts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-            }).catch((error) => {
-                setError(error)
-            }
-            ).finally(() => {
+            })
+            .finally(() => {
                 setLoading(false)
             })
             ;
@@ -37,9 +35,11 @@ console.log(products);
     return (
         <>
             <h2 className="my-5 text-center">Productos</h2>
-            <main className='container main-container'>
+            <div className='container main-container'>
+            {loading ? <Loader loading={loading} /> :
                 <ItemList products={products}/>
-            </main>
+    }
+            </div>
         </>
     )
 }

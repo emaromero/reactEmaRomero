@@ -45,18 +45,14 @@ const Cart = () => {
 				{cart.length > 0 &&
 					<div className='text-center d-flex justify-content-center align-items-center'>
 						<div className='row container justify-content-center align-items-center'>
-							<div className='col-2'></div>
-							<div className='col-4 text-center text-uppercase'>
+							<div className='col-6 text-center text-uppercase'>
 								<p className='h6'>productos</p>
 							</div>
-							<div className='col-2 text-center text-uppercase'>
+							<div className='col-4 text-center text-uppercase'>
 								<p className='h6'>cantidad</p>
 							</div>
 							<div className='col-2 text-center text-uppercase'>
 								<p className='h6'>precio</p>
-							</div>
-							<div className='col-2 text-center text-uppercase'>
-								<p className='h6'>total</p>
 							</div>
 						</div>
 					</div>
@@ -68,13 +64,13 @@ const Cart = () => {
 								<div className='col-6 d-flex'>
 									<div className='row d-flex'>
 										<div className='col-4 cart-img-container'>
-											<img src={e.img} className='cart-img'></img>
+											<img src={e.img} className='cart-img' alt={e.name}></img>
 										</div>
 										<div className='col-8 d-flex flex-column align-items-center justify-content-center'>
 											<p className='text-center'>{e.name}</p>
 											<p className='delete-btn' onClick={() => deleteItem(e.id)}>
-												<i className="fa fa-trash fa-sm">
-												</i> Eliminar producto
+												Eliminar producto
+												<box-icon name='trash' type='solid'></box-icon>
 											</p>
 										</div>
 									</div>
@@ -85,27 +81,31 @@ const Cart = () => {
 								<div className='col-2'>
 									<p className='text-center fw-bold'>${e.price}</p>
 								</div>
-								<div className='col-2'>
-									<p className='text-center fw-bold'>${e.qty * e.price}</p>
-								</div>
 							</div>
-
 						</div>
 					</>
 				))}
 			</section>
-
+			<div className="text-center row justify-content-end">
+                <p className='col-3 text-center text-uppercase'>
+                    <b>{getItemQty()} PRODUCTOS</b>
+                </p>
+                <p className='col-3 text-center text-uppercase'>
+                    <b>${getItemPrice()}</b>
+                </p>
+            </div>
 			{cart.length > 0 ?
-				<div className='text-center py-5'>
+				<div className='text-center py-5 '>
 					<button className='btn btn-outline-danger btn-sm mx-2 text-uppercase' onClick={() => {
 						emptyCart()
 						emptyCartAlert()
 					}}>Vaciar carrito</button>
-					<button className='btn btn-outline-success btn-sm mx-2' onClick={() => {
-						purchaseAlert()
-						emptyCart()
-					}}>Finalizar compra</button>
-					<p className='text-center'>PRECIO TOTAL ${getItemPrice()}</p>
+					<Link to={"/checkout"}>
+						<button className='btn btn-outline-success btn-sm mx-2 text-uppercase' onClick={() => {
+							
+						}}>Finalizar compra
+						</button>
+					</Link>
 				</div> :
 				<div className='text-center text-uppercase'>
 					<p>aun no agregaste productos</p>

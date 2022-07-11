@@ -18,11 +18,11 @@ export default function Footer() {
                         <div className="col-md-3 mb-md-0 mb-3">
                             <h5 className="text-uppercase">menu</h5>
                             <ul className="list-unstyled">
-                                <li className="nav-item text-reset mt-2"><Link to="/home" className=" a ">Inicio</Link></li>
+                                <li className="nav-item text-reset mt-2"><Link to="/" className=" a ">Inicio</Link></li>
                                 <li className="nav-item text-reset mt-2"><Link to="/productos" className=" a ">Productos</Link></li>
                                 <li className="nav-item text-reset mt-2"><Link to="/#" className=" a ">¿Quienes somos?</Link></li>
                                 <li className="nav-item text-reset mt-2"><Link to="/#" className=" a ">Ayuda</Link></li>
-                                <li className="nav-item text-reset mt-2"><Link to="/" className=" a ">Mi cuenta</Link></li>
+                                <li className="nav-item text-reset mt-2"><Link to="/micuenta" className=" a ">Mi cuenta</Link></li>
                             </ul>
                         </div>
                         <div className="col-md-3 mb-md-0 mb-3">
@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
                 <hr className="w-100 clearfix d-md-none" />
                 <div className="text-center p-3">
-                    <a className="text-reset a" href="#"> GorillaGlue.com</a>
+                    <Link className="text-reset a" to="/"> GorillaGlue.com</Link>
                     © 2022
                 </div>
             </footer>

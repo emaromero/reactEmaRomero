@@ -21,7 +21,7 @@ const ItemCount = ({ inicial, stock, onAdd, product }) => {
             iconColor: "#374151",
             title: `Se agregó \n<span style="color: #00A300">${product}</span> al carrito`,
             showConfirmButton: false,
-            timer: 1000,
+            timer:4000 ,
             showClass: {
                 popup: 'animate__animated animate__fadeInUp'
             },
@@ -37,7 +37,7 @@ const ItemCount = ({ inicial, stock, onAdd, product }) => {
                 <span className="minus" onClick={restar}>-</span>
                 <input type="number" className="count" name="qty" value={qty} onChange={(event) => this.inputChangedHandler(event)} />
                 <span className="plus" onClick={sumar}>+</span>
-                <button className="btn btn-secondary mx-4" onClick={() => { onAdd(qty); notification() }}>Agregar al carrito</button>
+                <button className="btn btn-outline-success mx-4" onClick={() => { onAdd(qty); notification() }}>Añadir al carrito</button>
             </div>
         </>
     )

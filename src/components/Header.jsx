@@ -2,6 +2,7 @@ import { } from 'boxicons';
 import { Link } from "react-router-dom";
 import RingoL from '../images/logoRingo.png';
 import CartFloat from './CartFloat';
+import Categories from './Categories';
 
 export const Header = () => {
 
@@ -15,9 +16,7 @@ export const Header = () => {
           <ul className="navbar-nav">
             <li className="nav-item text-reset"><Link to="/" className=" a ">Inicio</Link></li>
             <li className="nav-item text-reset"><Link to="/productos" className=" a ">Productos</Link></li>
-            <li className="nav-item text-reset"><Link to="/nosotros" className=" a ">¿Quienes somos?</Link></li>
-            <li className="nav-item text-reset"><Link to="/ayuda" className=" a ">Ayuda</Link></li>
-            <li className="nav-item text-reset"><Link to="/micuenta" className=" a ">Mi cuenta</Link></li>
+            <Categories/>
             <CartFloat/>
           </ul>
         </div>

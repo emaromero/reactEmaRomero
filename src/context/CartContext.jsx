@@ -1,8 +1,8 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect} from 'react'
 export const CartContext = createContext()
 
 const MyProvider = ({ children }) => {
-	const [cart, setCart] = useState([])
+	const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cartItems')) ?? [])
 
 	//ItemDetail - Si el producto a agregar ya está en el carrito o no (true/false)
 	const isInCart = (id) => {
@@ -16,7 +16,7 @@ const MyProvider = ({ children }) => {
 			qty
 		}
 		if (isInCart(item.id)) {
-			const findProduct = cart.find(x => x.id == item.id)
+			const findProduct = cart.find(x => x.id === item.id)
 			const productIndex = cart.indexOf(findProduct)
 			const auxArray = [...cart]
 			auxArray[productIndex].qty += qty
@@ -46,6 +46,9 @@ const MyProvider = ({ children }) => {
 	const getItemPrice = () => {
 		return cart.reduce((acc, x) => acc += x.qty * x.price, 0)
 	}
+	useEffect(() => {
+		localStorage.setItem("cartItems", JSON.stringify(cart));
+	}, [cart]);
 
 	return (
 		<CartContext.Provider value={{ cart, isInCart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice }}>

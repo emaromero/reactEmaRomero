@@ -1,13 +1,13 @@
 import "boxicons";
-import { initializeApp } from "firebase/app";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import { Header } from "./components/Header";
 import { MiCuenta } from "./components/MiCuenta";
+import CartCheck from "./components/page/productos/CartCheck";
+import ItemDetailContainer from "./components/page/productos/ItemDetailContainer";
 import ItemListContainer from "./components/page/productos/ItemListContainer";
 import MyProvider from "./context/CartContext";
-import ItemDetailContainer from "./components/page/productos/ItemDetailContainer";
-import Cart from "./components/Cart";
 
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
             <Route path="/" element={<ItemListContainer/>} />
             <Route path="/productos" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/categoria/:categoryId" element={<ItemListContainer />} />
+            <Route path="/checkout" element={<CartCheck />} />
+            <Route path="/category/:categoryId" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             </Routes>
             <Footer />
