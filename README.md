@@ -2,6 +2,8 @@
 
 Este proyecto fue desarrolado en el curso de React js en la Academia educativa CoderHouse. 
 
+[Aca esta adjuntado el gif](https://www.canva.com/design/DAFGOZU8FJY/V0QTmG12S3kDBOcl3MuiOw/watch?utm_content=DAFGOZU8FJY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+
 ## Cómo correr este proyecto:
 
 Para correrlo de manera local debes seguir los siguientes puntos:
