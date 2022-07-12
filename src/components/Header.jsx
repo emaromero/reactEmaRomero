@@ -11,7 +11,7 @@ export const Header = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="" id="navbarNav" style={{ textColor: 'black' }}>
           <div className="header__logo" id="logo">
-            <Link to="/" className=" a "><img src={RingoL} alt="logoRingo" /></Link>
+            <Link to="/" className="a animate__animated animate__fadeInLeftBig"><img src={RingoL} alt="logoRingo" /></Link>
           </div>
           <ul className="navbar-nav">
             <li className="nav-item text-reset"><Link to="/" className=" a ">Inicio</Link></li>

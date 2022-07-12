@@ -53,10 +53,10 @@ const CartCheck = () => {
 
     return (
         <div className="col-12 col-xl-4 container ">
-            <h2 className="text-center animate__animated animate__bounceInLeft text-uppercase">
+            <h2 className="text-center animate__animated animate__fadeInLeftBig text-uppercase">
                 Completa con tus datos
             </h2>
-            <div className="cart-container p-4 animate__animated animate__zoomInUp">
+            <div className="cart-container p-4 animate__animated animate__fadeInRightBig">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-1">
                         <label htmlFor="name" className="form-label">
