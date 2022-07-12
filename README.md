@@ -2,6 +2,8 @@
 
 Este proyecto fue desarrolado en el curso de React js en la Academia educativa CoderHouse. 
 
+[Aca esta adjuntado el gif](https://www.canva.com/design/DAFGOZU8FJY/V0QTmG12S3kDBOcl3MuiOw/watch?utm_content=DAFGOZU8FJY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+
 ## Cómo correr este proyecto:
 
 Para correrlo de manera local debes seguir los siguientes puntos:
@@ -17,7 +19,7 @@ De igual manera este proyecto esta deployeado en Vercel y podes visualizarlo hac
 
 [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) : Librería multiplataforma de código abierto para darle diseño a todo el proyecto.
 
-    $ npm add react-router-dom
+    $ npm install bootstrap
     
 [React Bootstrap](https://react-bootstrap.github.io/) : Librería que provee componentes de Bootstrap como componentes puros de React.
 
@@ -30,6 +32,7 @@ De igual manera este proyecto esta deployeado en Vercel y podes visualizarlo hac
 [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start) : Paquete para implementar routing dinámico.
 
     $ npm add react-router-dom
+    
 [Sweetalert2](https://sweetalert2.github.io/) : Libreria utilizadas para añadir alertas personalizadas. 
 
     $ npm install sweetalert2
